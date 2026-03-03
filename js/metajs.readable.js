@@ -41,34 +41,46 @@ window["onload"]= function() {
   /* ---------- GOVERNMENT SYSTEM LABELS ----------
      Maps executive/legislative/judicial selections to system names */
   var govSystemLabels=[ {
-    "dirz":"Direct Democracy","elez":"Participatory Democracy","appz":"Participatory Democracy","exez":"Pure Democracy","sorz":"Sortition Democracy","corpz":"Corporate Democracy","relz":"Theocratic Democracy"
+    "dirz":"Direct Democracy","elez":"Participatory Democracy","appz":"Participatory Democracy","exez":"Pure Democracy","sorz":"Sortition Democracy","corpz":"Corporate Democracy","relz":"Theocratic Democracy","herz":"Hereditary Democracy","milz":"Military Democracy","algoz":"Algorithmic Democracy"
   }, {
-    "dirz":"Participatory Democracy","elez":"Presidential Republic","appz":"Semi-Presidential Republic","exez":"Dictatorial Republic","sorz":"Sortition Republic","corpz":"Corporate Republic","relz":"Theocratic Republic"
+    "dirz":"Participatory Democracy","elez":"Presidential Republic","appz":"Semi-Presidential Republic","exez":"Dictatorial Republic","sorz":"Sortition Republic","corpz":"Corporate Republic","relz":"Theocratic Republic","herz":"Hereditary Republic","milz":"Military Republic","algoz":"Algorithmic Republic"
   }, {
-    "dirz":"Participatory Democracy","elez":"Parliamental Republic","appz":"One-Party State","exez":"Dictatorial One Party State","sorz":"Sortition One-Party State","corpz":"Corporate One-Party State","relz":"Theocratic One-Party State"
+    "dirz":"Participatory Democracy","elez":"Parliamental Republic","appz":"One-Party State","exez":"Dictatorial One Party State","sorz":"Sortition One-Party State","corpz":"Corporate One-Party State","relz":"Theocratic One-Party State","herz":"Hereditary One-Party State","milz":"Military One-Party State","algoz":"Algorithmic One-Party State"
   }, {
-    "dirz":"Dynastic Participatory Democracy","elez":"Dynastic Parliamental Republic","appz":"Dynastic State","exez":"Dictatorial Dynastic State","sorz":"Dynastic Sortition State","corpz":"Dynastic Corporate State","relz":"Dynastic Theocratic State"
+    "dirz":"Dynastic Participatory Democracy","elez":"Dynastic Parliamental Republic","appz":"Dynastic State","exez":"Dictatorial Dynastic State","sorz":"Dynastic Sortition State","corpz":"Dynastic Corporate State","relz":"Dynastic Theocratic State","herz":"Dynastic Hereditary State","milz":"Dynastic Military State","algoz":"Dynastic Algorithmic State"
   }, {
-    "dirz":"","elez":"Military Junta","appz":"Military Junta","exez":"Military Dictatorship","sorz":"Military Sortition State","corpz":"Military Corporate State","relz":"Military Theocratic State"
+    "dirz":"","elez":"Military Junta","appz":"Military Junta","exez":"Military Dictatorship","sorz":"Military Sortition State","corpz":"Military Corporate State","relz":"Military Theocratic State","herz":"Military Hereditary State","milz":"Military State","algoz":"Military Algorithmic State"
   }, {
-    "dirz":"Sortition Democracy","elez":"Sortition Republic","appz":"Sortition Republic","exez":"Sortition State","sorz":"Pure Sortition State","corpz":"Sortition Corporate State","relz":"Sortition Theocratic State"
+    "dirz":"Sortition Democracy","elez":"Sortition Republic","appz":"Sortition Republic","exez":"Sortition State","sorz":"Pure Sortition State","corpz":"Sortition Corporate State","relz":"Sortition Theocratic State","herz":"Sortition Hereditary State","milz":"Sortition Military State","algoz":"Sortition Algorithmic State"
   }, {
-    "dirz":"Corporate Democracy","elez":"Corporate Republic","appz":"Corporate State","exez":"Corporate Dictatorship","sorz":"Corporate Sortition State","corpz":"Corporate Oligarchy","relz":"Corporate Theocratic State"
+    "dirz":"Corporate Democracy","elez":"Corporate Republic","appz":"Corporate State","exez":"Corporate Dictatorship","sorz":"Corporate Sortition State","corpz":"Corporate Oligarchy","relz":"Corporate Theocratic State","herz":"Corporate Hereditary State","milz":"Corporate Military State","algoz":"Corporate Algorithmic State"
+  }, {
+    "dirz":"Theocratic Democracy","elez":"Theocratic Republic","appz":"Theocratic State","exez":"Theocratic Dictatorship","sorz":"Theocratic Sortition State","corpz":"Theocratic Corporate State","relz":"Pure Theocracy","herz":"Theocratic Hereditary State","milz":"Theocratic Military State","algoz":"Theocratic Algorithmic State"
+  }, {
+    "dirz":"","elez":"","appz":"","exez":"","sorz":"","corpz":"","relz":"","herz":"","milz":"","algoz":""
+  }, {
+    "dirz":"Algorithmic Democracy","elez":"Algorithmic Republic","appz":"Algorithmic State","exez":"Algorithmic Dictatorship","sorz":"Algorithmic Sortition State","corpz":"Algorithmic Corporate State","relz":"Algorithmic Theocratic State","herz":"Algorithmic Hereditary State","milz":"Algorithmic Military State","algoz":"Pure Algorithmic State"
   }];
   var monarchyLabels=[ {
-    "dirz":"","elez":"","appz":"","exez":"","sorz":"","corpz":"","relz":""
+    "dirz":"","elez":"","appz":"","exez":"","sorz":"","corpz":"","relz":"","herz":"","milz":"","algoz":""
   }, {
-    "dirz":"Participatory Republican Monarchy","elez":"Republican Monarchy","appz":"Republican Monarchy","exez":"Dictatorial Republican Monarchy","sorz":"Sortition Monarchy","corpz":"Corporate Monarchy","relz":"Theocratic Monarchy"
+    "dirz":"Participatory Republican Monarchy","elez":"Republican Monarchy","appz":"Republican Monarchy","exez":"Dictatorial Republican Monarchy","sorz":"Sortition Monarchy","corpz":"Corporate Monarchy","relz":"Theocratic Monarchy","herz":"Hereditary Republican Monarchy","milz":"Military Monarchy","algoz":"Algorithmic Monarchy"
   }, {
-    "dirz":"Participatory Monarchy","elez":"Parliamental Monarchy","appz":"Elective Monarchy","exez":"Dictatorial Elective Monarchy","sorz":"Sortition Elective Monarchy","corpz":"Corporate Elective Monarchy","relz":"Theocratic Elective Monarchy"
+    "dirz":"Participatory Monarchy","elez":"Parliamental Monarchy","appz":"Elective Monarchy","exez":"Dictatorial Elective Monarchy","sorz":"Sortition Elective Monarchy","corpz":"Corporate Elective Monarchy","relz":"Theocratic Elective Monarchy","herz":"Hereditary Elective Monarchy","milz":"Military Elective Monarchy","algoz":"Algorithmic Elective Monarchy"
   }, {
-    "dirz":"Participatory Hereditary Monarchy","elez":"Parliamental Hereditary Monarchy","appz":"Hereditary Monarchy","exez":"Dictatorial Hereditary Monarchy","sorz":"Sortition Hereditary Monarchy","corpz":"Corporate Hereditary Monarchy","relz":"Theocratic Hereditary Monarchy"
+    "dirz":"Participatory Hereditary Monarchy","elez":"Parliamental Hereditary Monarchy","appz":"Hereditary Monarchy","exez":"Dictatorial Hereditary Monarchy","sorz":"Sortition Hereditary Monarchy","corpz":"Corporate Hereditary Monarchy","relz":"Theocratic Hereditary Monarchy","herz":"Pure Hereditary Monarchy","milz":"Military Hereditary Monarchy","algoz":"Algorithmic Hereditary Monarchy"
   }, {
-    "dirz":"","elez":"Military Autocracy","appz":"Military Autocracy","exez":"Military Despotism","sorz":"Military Sortition Autocracy","corpz":"Military Corporate Autocracy","relz":"Military Theocratic Autocracy"
+    "dirz":"","elez":"Military Autocracy","appz":"Military Autocracy","exez":"Military Despotism","sorz":"Military Sortition Autocracy","corpz":"Military Corporate Autocracy","relz":"Military Theocratic Autocracy","herz":"Military Hereditary Autocracy","milz":"Military Autocracy","algoz":"Military Algorithmic Autocracy"
   }, {
-    "dirz":"Sortition Autocracy","elez":"Sortition Principality","appz":"Sortition Principality","exez":"Sortition Despotism","sorz":"Pure Sortition Principality","corpz":"Corporate Sortition Autocracy","relz":"Theocratic Sortition Autocracy"
+    "dirz":"Sortition Autocracy","elez":"Sortition Principality","appz":"Sortition Principality","exez":"Sortition Despotism","sorz":"Pure Sortition Principality","corpz":"Corporate Sortition Autocracy","relz":"Theocratic Sortition Autocracy","herz":"Hereditary Sortition Autocracy","milz":"Military Sortition Autocracy","algoz":"Algorithmic Sortition Autocracy"
   }, {
-    "dirz":"Corporate Autocracy","elez":"Corporate Principality","appz":"Corporate Autocracy","exez":"Corporate Despotism","sorz":"Corporate Sortition Autocracy","corpz":"Corporate Oligarchic Autocracy","relz":"Corporate Theocratic Autocracy"
+    "dirz":"Corporate Autocracy","elez":"Corporate Principality","appz":"Corporate Autocracy","exez":"Corporate Despotism","sorz":"Corporate Sortition Autocracy","corpz":"Corporate Oligarchic Autocracy","relz":"Corporate Theocratic Autocracy","herz":"Corporate Hereditary Autocracy","milz":"Corporate Military Autocracy","algoz":"Corporate Algorithmic Autocracy"
+  }, {
+    "dirz":"Theocratic Autocracy","elez":"Theocratic Principality","appz":"Theocratic Autocracy","exez":"Theocratic Despotism","sorz":"Theocratic Sortition Autocracy","corpz":"Theocratic Corporate Autocracy","relz":"Pure Theocratic Autocracy","herz":"Theocratic Hereditary Autocracy","milz":"Theocratic Military Autocracy","algoz":"Theocratic Algorithmic Autocracy"
+  }, {
+    "dirz":"","elez":"","appz":"","exez":"","sorz":"","corpz":"","relz":"","herz":"","milz":"","algoz":""
+  }, {
+    "dirz":"Algorithmic Autocracy","elez":"Algorithmic Principality","appz":"Algorithmic Autocracy","exez":"Algorithmic Despotism","sorz":"Algorithmic Sortition Autocracy","corpz":"Algorithmic Corporate Autocracy","relz":"Algorithmic Theocratic Autocracy","herz":"Algorithmic Hereditary Autocracy","milz":"Algorithmic Military Autocracy","algoz":"Pure Algorithmic Autocracy"
   }];
 
   /* ---------- CHART VISUAL ASSETS ---------- */
@@ -279,6 +291,8 @@ window["onload"]= function() {
     "valz":null,"id":"dataown"
   }, {
     "valz":null,"id":"taxloop"
+  }, {
+    "valz":null,"id":"taxenforce"
   }, {
     "valz":null,"id":"mifu"
   }, {
@@ -1593,6 +1607,17 @@ window["onload"]= function() {
       $(".wealthtaxthresh")["html"]("Wealth Tax Threshold: "+ wtThreshLabels[ui["value"]])
     }
   });
+  $("#taxloop")["on"]("change",function() {
+    var lv=parseInt($(this)["val"]());
+    if(lv>= 7) {
+      $("#taxenforce")["val"]("0")["trigger"]("change")["prop"]("disabled",true);
+      $("#taxenforce")["next"](".select2-container")["addClass"]("select2-container--disabled");
+    }else {
+      $("#taxenforce")["prop"]("disabled",false);
+      $("#taxenforce")["next"](".select2-container")["removeClass"]("select2-container--disabled");
+    }
+  });
+  $(".compslider")["slider"]({value:0,min:0,max:100,step:1,range:"min",disabled:true});
   $("#artscult")["slider"]( {
     value:0.25,min:0,max:0.75,step:0.01,slide:function(evt,ui) {
       $(".artscult")["html"]("Arts &amp; Culture: "+ ui["value"].toFixed(2)+ "% of GDP")
@@ -2611,7 +2636,8 @@ window["onload"]= function() {
     var wtRatePct=[0,0.5,1,2,5,10,15,25][wtRateIdx];
     var wealthtaxVal=wtRateIdx;
     var wtThreshVal=$("#wealthtaxthresh")["slider"]("value");
-    var wtThreshRevMult=[0.05,0.2,0.6,1.0,2.0,3.0][wtThreshVal];
+    var wtWealthBase=[0.20,0.60,1.00,1.40,2.00,2.60][wtThreshVal];
+    var wtBaseCompliance=[0,0.95,0.90,0.75,0.45,0.20,0.10,0.05][wtRateIdx];
     var wtThreshBreadth=[0.05,0.15,0.35,0.5,0.7,1.0][wtThreshVal];
     var statebankVal=$("#statebank")["val"]();
     var airegulVal=$("#airegul")["val"]();
@@ -2620,6 +2646,25 @@ window["onload"]= function() {
     var geneditVal=$("#genedit")["val"]();
     var dataownVal=$("#dataown")["val"]();
     var taxloopVal=$("#taxloop")["val"]();
+    var taxenforceVal=parseInt($("#taxenforce")["val"]())|| 0;
+    var wtLoopholeMult=[0.45,0.55,0.80,0.90,0.95,1.0,1.0,0.95,0.25][taxloopVal];
+    var enforceLeverage=[2.0,1.8,1.4,1.2,1.0,0.7,0.5,0.3,0.1][taxloopVal];
+    var wtSquadBase=[1.0,1.15,1.3,1.5,1.8,2.2,3.0][taxenforceVal];
+    var wtSquadBoost=1.0+(wtSquadBase- 1.0)* (enforceLeverage|| 1.0);
+    var wtSquadGdpDrag=[0,0.005,0.01,0.02,0.04,0.07,0.12][taxenforceVal];
+    var wtThreshCompliance=[1.0,0.95,0.88,0.80,0.70,0.55][wtThreshVal];
+    var wtCompliance=Math.min(0.98,wtBaseCompliance* wtLoopholeMult* wtSquadBoost* wtThreshCompliance);
+    var wtCompliancePct=wtRateIdx=== 0? -1: Math.round(wtCompliance* 100);
+    var inherMinRate=inherMinVal/ 100;
+    var inherTopRate=inherMaxVal/ 100;
+    var inherEffRate=inherMinRate* 0.6+ inherTopRate* 0.4;
+    var inherBaseCompl=inherEffRate> 0? 1.0- 0.80* inherEffRate: 1.0;
+    var inherCompliance=Math.min(0.98,inherBaseCompl* wtLoopholeMult* wtSquadBoost);
+    var inherCompliancePct=inherEffRate> 0? Math.round(inherCompliance* 100): -1;
+    $("#wtcompslider")["slider"]("value",wtCompliancePct< 0? 0: wtCompliancePct);
+    $(".wtcomplabel")["html"](wtCompliancePct< 0? "Wealth Tax Compliance: \u2014": "Wealth Tax Compliance: "+ wtCompliancePct+ "%");
+    $("#inhcompslider")["slider"]("value",inherCompliancePct< 0? 0: inherCompliancePct);
+    $(".inhcomplabel")["html"](inherCompliancePct< 0? "Inheritance Compliance: \u2014": "Inheritance Compliance: "+ inherCompliancePct+ "%");
     var votrVal=$("#votr")["val"]()|| [];
     var entreqVal=$("#entreq")["val"]()|| [];
     var envregVal=$("#envreg")["val"]()|| [];
@@ -3250,13 +3295,34 @@ window["onload"]= function() {
     var sciSpending=gdpMultiplier* rndVal/ 100;
     var basicIncSpending=gdpMultiplier* basincVal/ 100;
     var milSpending=Math["easeIn"](milSpending,0,gdpMultiplier,1.8854);
+    var enforceMilCost=[0,0.001,0.002,0.004,0.006,0.01,0.015][taxenforceVal]|| 0;
+    milSpending=milSpending+ gdpMultiplier* enforceMilCost;
     var sciSpending=Math["easeIn"](sciSpending,0,gdpMultiplier,1.75);
     var basicIncSpending=Math["easeIn"](basicIncSpending,0,gdpMultiplier,1.75);
     var totalGovSpending=0;
     var gdpBoostLookup=[1.0, 1.005, 1.01, 1.02, 1.035, 1.06, 1.10, 1.15, 1.20];
     var loopholeGdpBoost=gdpBoostLookup[taxloopVal]!== undefined? gdpBoostLookup[taxloopVal]: 1.0;
-    var totalSectorGdp=(eduGdpPct* gdpMultiplier/ 100+ medGdpPct* gdpMultiplier/ 100+ bankGdpPct* gdpMultiplier/ 100+ heaGdpPct* gdpMultiplier/ 100+ retGdpPct* gdpMultiplier/ 100+ manuGdpPct* gdpMultiplier/ 100+ infrGdpPct* gdpMultiplier/ 100+ agrGdpPct* gdpMultiplier/ 100+ reaGdpPct* gdpMultiplier/ 100+ natGdpPct* gdpMultiplier/ 100)* loopholeGdpBoost;
-    var totalGdpWithGov=(eduGdpPct* gdpMultiplier/ 100+ medGdpPct* gdpMultiplier/ 100+ bankGdpPct* gdpMultiplier/ 100+ heaGdpPct* gdpMultiplier/ 100+ retGdpPct* gdpMultiplier/ 100+ manuGdpPct* gdpMultiplier/ 100+ infrGdpPct* gdpMultiplier/ 100+ agrGdpPct* gdpMultiplier/ 100+ natGdpPct* gdpMultiplier/ 100)* loopholeGdpBoost;
+    var wtEconDrag=[0,0.005,0.01,0.02,0.05,0.10,0.15,0.20][wtRateIdx];
+    var wtBreadthDrag=[0.1,0.2,0.4,0.6,0.8,1.0][wtThreshVal];
+    var wtLoopholeDrag=[1.0,0.95,0.90,0.80,0.70,0.55,0.35,0.20,0.05][taxloopVal];
+    var inherMinDrag=inherMinVal> 10? 0.0006* Math.pow(inherMinVal- 10,1.4): 0;
+    var inherMaxDrag=inherMaxVal> 30? 0.0002* Math.pow(inherMaxVal- 30,1.3): 0;
+    var inherGdpDrag=inherMinDrag+ inherMaxDrag;
+    var sectorTaxDrags=[];
+    var spilloverTotal=0;
+    for(var ci=0;ci<10;ci++){
+      var cMin=sectors[ci]["corz"]|| 0,cMax=sectors[ci]["corz2"]|| 0;
+      var iMin=sectors[ci]["incz"]|| 0,iMax=sectors[ci]["incz2"]|| 0;
+      var cDrag=(cMin> 10? 0.0004* Math.pow(cMin- 10,1.3): 0)+(cMax> 60? 0.0005* Math.pow(cMax- 60,1.2): 0);
+      var iDrag=(iMin> 10? 0.0003* Math.pow(iMin- 10,1.3): 0)+(iMax> 60? 0.0004* Math.pow(iMax- 60,1.2): 0);
+      var sDrag=cDrag+ iDrag;
+      sectorTaxDrags[ci]=sDrag;
+      spilloverTotal+=sDrag;
+    }
+    var spilloverAvg=spilloverTotal/ 10* 0.05;
+    var wtGdpPenalty=Math.max(0.5,1- wtEconDrag* wtBreadthDrag* wtLoopholeDrag- wtSquadGdpDrag- inherGdpDrag- spilloverAvg);
+    var totalSectorGdp=(eduGdpPct* gdpMultiplier/ 100+ medGdpPct* gdpMultiplier/ 100+ bankGdpPct* gdpMultiplier/ 100+ heaGdpPct* gdpMultiplier/ 100+ retGdpPct* gdpMultiplier/ 100+ manuGdpPct* gdpMultiplier/ 100+ infrGdpPct* gdpMultiplier/ 100+ agrGdpPct* gdpMultiplier/ 100+ reaGdpPct* gdpMultiplier/ 100+ natGdpPct* gdpMultiplier/ 100)* loopholeGdpBoost* wtGdpPenalty;
+    var totalGdpWithGov=(eduGdpPct* gdpMultiplier/ 100+ medGdpPct* gdpMultiplier/ 100+ bankGdpPct* gdpMultiplier/ 100+ heaGdpPct* gdpMultiplier/ 100+ retGdpPct* gdpMultiplier/ 100+ manuGdpPct* gdpMultiplier/ 100+ infrGdpPct* gdpMultiplier/ 100+ agrGdpPct* gdpMultiplier/ 100+ natGdpPct* gdpMultiplier/ 100)* loopholeGdpBoost* wtGdpPenalty;
     var envRegSpending=ax8Total* totalSectorGdp* 0.015/ 36.3;
     var immRegSpending=ax9Total* totalSectorGdp* 0.015/ 94.7;
     if(envRegSpending< 0) {
@@ -3282,9 +3348,23 @@ window["onload"]= function() {
       if(i== 2) { sectorLoopholeBoost= 1+ (loopholeGdpBoost- 1)* 3.5 }
       if(i== 9) { sectorLoopholeBoost= 1+ (loopholeGdpBoost- 1)* 2.5 }
       if(i== 4) { sectorLoopholeBoost= 1+ (loopholeGdpBoost- 1)* 1.5 }
-      sectors[i]["sectgdp"]= sectors[i]["sectgdpprc"]* gdpMultiplier/ 100* sectorLoopholeBoost
+      sectors[i]["sectgdp"]= sectors[i]["sectgdpprc"]* gdpMultiplier/ 100* sectorLoopholeBoost* wtGdpPenalty
     };
     sectors[10]["sectgdp"]= welfareSpending;
+    var sectorCompMods=[0.85,0.80,0.60,0.82,0.75,0.90,0.88,0.92,0.90,0.85];
+    var sectorCompIds=["educomp","medcomp","bankcomp","heacomp","retcomp","manucomp","infrcomp","agrcomp","natcomp","reacomp"];
+    var tlv=parseInt(taxloopVal,10)|| 0;
+    var sectorLoopCompl=[0.45,0.55,0.80,0.90,0.95,1.0,1.0,0.95,0.25][tlv];
+    if(sectorLoopCompl=== undefined) sectorLoopCompl=0.75;
+    var sqBoost=typeof wtSquadBoost==="number"&& !isNaN(wtSquadBoost)? wtSquadBoost: 1.0;
+    for(var sc=0;sc<10;sc++) {
+      var sCompBase=sectorLoopCompl* sectorCompMods[sc]* sqBoost;
+      var sCompPct=Math.min(98,Math.round(sCompBase* 100));
+      if(isNaN(sCompPct)) sCompPct= 0;
+      if(tlv>= 8) sCompPct= Math.min(sCompPct,5);
+      $("#"+ sectorCompIds[sc])["slider"]("value",sCompPct);
+      $("."+ sectorCompIds[sc])["html"]("Tax Compliance: "+ sCompPct+ "%");
+    }
     for(i= 0;
     i< sectors["length"];
     i++) {
@@ -3550,10 +3630,10 @@ window["onload"]= function() {
       var wageRatioAdj=0
     };
     var publicSectorCost=Math["round"]((pricingAdjustment* 1.3+ wageAdjustment+ wageRatioAdj* 0.7)* 0.65/ 3+ (sectorTaxIncome+ sectorCorpTax)* 0.35)["toLocaleString"](2);
-    var estateRevenue=((inherMinVal/ 100)* totalGovSpending* 1.3+ (inherMaxVal/ 100)* totalGovSpending* 3.7)* 0.015;
-    var estateMaxRevenue=(totalGovSpending* 1.3+ totalGovSpending* 3.7)* 0.015;
+    var estateRevenue=((inherMinVal/ 100)* 0.024+ (inherMaxVal/ 100)* 0.056)* totalGovSpending;
+    var estateMaxRevenue=0.08* totalGovSpending;
     var estateEffRate=estateRevenue* 100/ estateMaxRevenue;
-    var wealthTaxRevenue=(wtRatePct/ 100)* totalGovSpending* 7.5* 0.04* wtThreshRevMult;
+    var wealthTaxRevenue=(wtRatePct/ 100)* wtWealthBase* wtCompliance* totalGovSpending;
     var landTaxRevenue=reaLandTaxVal* totalGovSpending/ 407.9;
     var propTaxRevenue=reaPropTaxVal* totalGovSpending/ 800;
     var rentTaxRevenue=reaRentTaxVal* sectors[9]["sectgdp"]/ 200;
@@ -3619,7 +3699,7 @@ window["onload"]= function() {
     incomePctGdp= incomePctGdp* taxEfficiency;
     sectorCorpTaxMax= sectorCorpTaxMax* taxEfficiency;
     sectorCorpTaxMin= sectorCorpTaxMin* taxEfficiency;
-    estateRevenue= estateRevenue* taxEfficiency;
+    estateRevenue= estateRevenue* inherCompliance;
     wealthTaxRevenue= wealthTaxRevenue* taxEfficiency;
     reaIncomeTotal= reaPrivateTaxTotal* taxEfficiency+ reaPublicIncome;
     envRegSpending= envRegSpending* taxEfficiency;
@@ -3757,7 +3837,7 @@ window["onload"]= function() {
     $(".structz")["html"](econModifier);
     var _0xb6a8x13e="";
     var _0xb6a8x13f="-";
-    var syslKeys=["dirz","elez","appz","exez","sorz","corpz","relz"];
+    var syslKeys=["dirz","elez","appz","exez","sorz","corpz","relz","herz","milz","algoz"];
     var labelTable=(govgVal== 0)? govSystemLabels: monarchyLabels;
     if(labelTable[syseVal]&& syslKeys[syslVal]) {
       var _0xb6a8x13f=labelTable[syseVal][syslKeys[syslVal]]|| "-"
@@ -3776,6 +3856,15 @@ window["onload"]= function() {
     };
     if(sysjVal== 7) {
       var _0xb6a8x13e="Corporate"
+    };
+    if(sysjVal== 8) {
+      var _0xb6a8x13e="Martial"
+    };
+    if(sysjVal== 9) {
+      var _0xb6a8x13e="Sortitive"
+    };
+    if(sysjVal== 10) {
+      var _0xb6a8x13e="Dynastic"
     };
     if(syseVal== 0&& syslVal== 3&& sysjVal== 3) {
       var _0xb6a8x13f="Absolute Democracy"
@@ -4309,10 +4398,15 @@ window["onload"]= function() {
     for(var i=0;
     i< sectors["length"];
     i++) {
-      sectorChartConfig["datasets"][0]["data"][i+ 1]= sectors[i]["owfun1"]* (sectors[i]["sectgdpprc"]/ 100);
-      sectorChartConfig["datasets"][1]["data"][i+ 1]= sectors[i]["owfun2"]* (sectors[i]["sectgdpprc"]/ 100);
-      sectorChartConfig["datasets"][2]["data"][i+ 1]= sectors[i]["owfun3"]* (sectors[i]["sectgdpprc"]/ 100);
-      sectorChartConfig["datasets"][3]["data"][i+ 1]= sectors[i]["owfun4"]* (sectors[i]["sectgdpprc"]/ 100)
+      var sTaxPen=i< 10? Math.max(0.3,1- sectorTaxDrags[i]- (spilloverTotal- sectorTaxDrags[i])/ 9* 0.05): 1;
+      var pubGdp=(sectors[i]["owfun1"]+ sectors[i]["owfun2"])* sectors[i]["sectgdp"]/ 100;
+      var subGdp=sectors[i]["owfun3"]* sectors[i]["sectgdp"]/ 100;
+      var privGdp=sectors[i]["owfun4"]* sectors[i]["sectgdp"]/ 100* sTaxPen;
+      sectorChartConfig["datasets"][0]["data"][i+ 1]= sectors[i]["owfun1"]* sectors[i]["sectgdp"]/ 100;
+      sectorChartConfig["datasets"][1]["data"][i+ 1]= sectors[i]["owfun2"]* sectors[i]["sectgdp"]/ 100;
+      sectorChartConfig["datasets"][2]["data"][i+ 1]= subGdp;
+      sectorChartConfig["datasets"][3]["data"][i+ 1]= privGdp;
+      sectors[i]["effgdp"]= pubGdp+ subGdp+ privGdp
     };
     if(sovVal== 3&& sovOwVal== 1) {
       sectorChartConfig["datasets"][3]["data"][0]= welfareSpending* 100/ gdpMultiplier;
@@ -4338,34 +4432,34 @@ window["onload"]= function() {
       sectorChartConfig["labels"][0]= "Government: $"+ (welfareSpending)["toLocaleString"](undefined, {
         maximumFractionDigits:1
       })+ " Bln";
-      sectorChartConfig["labels"][1]= "Education: $"+ (sectors[0]["sectgdp"])["toLocaleString"](undefined, {
+      sectorChartConfig["labels"][1]= "Education: $"+ (sectors[0]["effgdp"]|| sectors[0]["sectgdp"])["toLocaleString"](undefined, {
         maximumFractionDigits:1
       })+ " Bln";
-      sectorChartConfig["labels"][2]= "Media: $"+ (sectors[1]["sectgdp"])["toLocaleString"](undefined, {
+      sectorChartConfig["labels"][2]= "Media: $"+ (sectors[1]["effgdp"]|| sectors[1]["sectgdp"])["toLocaleString"](undefined, {
         maximumFractionDigits:1
       })+ " Bln";
-      sectorChartConfig["labels"][3]= "Finance: $"+ (sectors[2]["sectgdp"])["toLocaleString"](undefined, {
+      sectorChartConfig["labels"][3]= "Finance: $"+ (sectors[2]["effgdp"]|| sectors[2]["sectgdp"])["toLocaleString"](undefined, {
         maximumFractionDigits:1
       })+ " Bln";
-      sectorChartConfig["labels"][4]= "Healthcare: $"+ (sectors[3]["sectgdp"])["toLocaleString"](undefined, {
+      sectorChartConfig["labels"][4]= "Healthcare: $"+ (sectors[3]["effgdp"]|| sectors[3]["sectgdp"])["toLocaleString"](undefined, {
         maximumFractionDigits:1
       })+ " Bln";
-      sectorChartConfig["labels"][5]= "Retail: $"+ (sectors[4]["sectgdp"])["toLocaleString"](undefined, {
+      sectorChartConfig["labels"][5]= "Retail: $"+ (sectors[4]["effgdp"]|| sectors[4]["sectgdp"])["toLocaleString"](undefined, {
         maximumFractionDigits:1
       })+ " Bln";
-      sectorChartConfig["labels"][6]= "Manufacturing: $"+ (sectors[5]["sectgdp"])["toLocaleString"](undefined, {
+      sectorChartConfig["labels"][6]= "Manufacturing: $"+ (sectors[5]["effgdp"]|| sectors[5]["sectgdp"])["toLocaleString"](undefined, {
         maximumFractionDigits:1
       })+ " Bln";
-      sectorChartConfig["labels"][7]= "Construction: $"+ (sectors[6]["sectgdp"])["toLocaleString"](undefined, {
+      sectorChartConfig["labels"][7]= "Construction: $"+ (sectors[6]["effgdp"]|| sectors[6]["sectgdp"])["toLocaleString"](undefined, {
         maximumFractionDigits:1
       })+ " Bln";
-      sectorChartConfig["labels"][8]= "Agriculture: $"+ (sectors[7]["sectgdp"])["toLocaleString"](undefined, {
+      sectorChartConfig["labels"][8]= "Agriculture: $"+ (sectors[7]["effgdp"]|| sectors[7]["sectgdp"])["toLocaleString"](undefined, {
         maximumFractionDigits:1
       })+ " Bln";
-      sectorChartConfig["labels"][9]= "Natural Resources: $"+ (sectors[8]["sectgdp"])["toLocaleString"](undefined, {
+      sectorChartConfig["labels"][9]= "Natural Resources: $"+ (sectors[8]["effgdp"]|| sectors[8]["sectgdp"])["toLocaleString"](undefined, {
         maximumFractionDigits:1
       })+ " Bln";
-      sectorChartConfig["labels"][10]= "Real Estate: $"+ (sectors[9]["sectgdp"])["toLocaleString"](undefined, {
+      sectorChartConfig["labels"][10]= "Real Estate: $"+ (sectors[9]["effgdp"]|| sectors[9]["sectgdp"])["toLocaleString"](undefined, {
         maximumFractionDigits:1
       })+ " Bln"
     }else  {
