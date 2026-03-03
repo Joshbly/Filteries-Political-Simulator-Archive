@@ -1,0 +1,47 @@
+---
+description: Political spectrum coordinate system and weight conventions for the simulator engine
+globs: js/metajs.readable.js
+alwaysApply: false
+---
+
+# Political Spectrum Coordinate System
+
+The axis naming is SWAPPED from what you'd expect.
+
+## Weight Tables → Chart Axes
+
+- `spectrumWeightsX` → drives `pointY` (VERTICAL axis)
+  - POSITIVE weight = STATISM (dot moves UP)
+  - NEGATIVE weight = MINARCHISM (dot moves DOWN)
+
+- `spectrumWeightsY` → drives `pointX` (HORIZONTAL axis)
+  - POSITIVE weight = RIGHT (dot moves RIGHT)
+  - NEGATIVE weight = LEFT (dot moves LEFT)
+
+## How It Works
+
+```
+pointY = (_0xb6a8x15f * 2 - 100) * 0.732
+  where _0xb6a8x15f uses xAxisTotal (from spectrumWeightsX)
+  Chart.js: positive Y = UP = STATISM
+
+pointX = (_0xb6a8x15b * 2 - 100) * 0.732
+  where _0xb6a8x15b uses yAxisTotal (from spectrumWeightsY)
+```
+
+## Weight Design Rules
+
+1. X and Y weights for a selector MUST be set independently
+2. Ask: "Does this increase state control?" → X weight (positive=statist)
+3. Ask: "Is this economically left or right?" → Y weight (negative=left, positive=right)
+4. Authoritarian policies (censorship, surveillance) → positive X, Y near 0
+5. Economic policies (healthcare, taxes) → both X and Y have strong values
+6. Cultural policies (marriage, religion) → X may vary, Y near 0
+7. Use `!== undefined` checks for zero values (JS falsy trap: `0 || default` returns default)
+
+## Chart Labels
+
+- TOP = STATISM
+- BOTTOM = MINARCHISM
+- LEFT = LEFT (economic)
+- RIGHT = RIGHT (economic)

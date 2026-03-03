@@ -1553,7 +1553,21 @@ hr{
   margin-left:0%;
 padding:0 !important;
     line-height:100% !important;
-    max-width:400px !important;
+    max-width:min(450px, calc(100vw - 20px)) !important;
+    max-height:min(500px, calc(100vh - 20px)) !important;
+}
+.qtip-content{
+    overflow-y:auto !important;
+    max-height:min(480px, calc(100vh - 40px)) !important;
+    word-wrap:break-word !important;
+}
+.qtip-content table{
+    table-layout:fixed !important;
+    width:100% !important;
+}
+.qtip-content td,.qtip-content th{
+    word-wrap:break-word !important;
+    overflow-wrap:break-word !important;
 }
 
 
