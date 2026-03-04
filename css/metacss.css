@@ -1610,6 +1610,12 @@ padding:0 !important;
 .sliti.complabel{
     color:#333 !important;
 }
+.select2-container.select2-locked .select2-selection--single{
+    visibility:visible !important;
+    background:#8D9197 !important;
+    opacity:0.6 !important;
+    pointer-events:none !important;
+}
 
 
 
