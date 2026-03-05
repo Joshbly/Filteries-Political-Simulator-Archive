@@ -33,12 +33,7 @@
       <div class="menuz" aria-hidden="true">
         <div class="filteries"> </div>
       </div>
-      <div style="text-align:center;padding:6px 0;">
-        <button id="saveBtn" style="background:#4a4d55;color:#ccc;border:1px solid #666;padding:5px 14px;margin:0 4px;cursor:pointer;font-size:0.85rem;border-radius:3px;">Save Build</button>
-        <button id="loadBtn" style="background:#4a4d55;color:#ccc;border:1px solid #666;padding:5px 14px;margin:0 4px;cursor:pointer;font-size:0.85rem;border-radius:3px;">Load Build</button>
-        <button id="shareBtn" style="background:#4a4d55;color:#ccc;border:1px solid #666;padding:5px 14px;margin:0 4px;cursor:pointer;font-size:0.85rem;border-radius:3px;">Copy Link</button>
-        <input type="file" id="loadFile" accept=".json" style="display:none;">
-      </div>
+      <input type="file" id="loadFile" accept=".json" style="display:none;">
       <div class="floater ">
         <div class="beta tbot floater" data-hasqtip="0" title="&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;BETA v0.4.19&lt;/th&gt;&lt;th&gt;Latest Updates - 2018/05/02&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Bugs &amp; UI&lt;/td&gt;&lt;td&gt;Fixed the wrong tooltip titles of Estate Tax and Public Industries in the budget income chart&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Government&lt;/td&gt;&lt;td&gt;Free association choice will now give you the option between public and private ownership&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Estate tax renamed to inheritance tax&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;An average death rate will now be applied to the inheritance tax value&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Sector nationalization will no longer affect the inheritance tax&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Sectors&lt;/td&gt;&lt;td&gt;Sector panels will now always be visible&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Sector sliders that can&#39;t be applied will now be disabled&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Taxation, tariffs and public funding sliders will now only apply for the private sector&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Public funding renamed to Subsidies&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;New sector management sliders for the public sector added: price control, wage control and wage ratio&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Real estate sliders are now replaced with new taxes: Land tax, Property tax, Rent tax and Sales tax&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;New public real estate sector controls added: Selling prices, Renting prices&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Export sliders removed for certain sectors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Consumption tax of the financial sector replaced with capital gains tax&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Results&lt;/td&gt;&lt;td&gt;New economic results added: Mutualism&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Real estate added in income and spending budgets&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;">BETA v0.4.19</div>Political Simulator
       </div>
@@ -68,6 +63,22 @@
           <div class="sizer a1 titler1 ressec">Reset Sectors</div>
           <div class="sizer a1 titler1 resall">Reset All</div>
         </div>
+      </div>
+      <div style="float:right;width:1px;height:18px;background:#5a5d63;margin:10px 4px 0;opacity:0.5;"></div>
+      <div class="floaterz" style="margin-right:2px;">
+        <svg id="shareBtn" class="svg-inline--fa fa-w-16 floater opener tlef" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" title="&lt;ol&gt;Copy Link&lt;/ol&gt;">
+          <path fill="currentColor" d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path>
+        </svg>
+      </div>
+      <div class="floaterz">
+        <svg id="loadBtn" class="svg-inline--fa fa-w-18 floater opener tlef" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" title="&lt;ol&gt;Load Build&lt;/ol&gt;">
+          <path fill="currentColor" d="M572.694 292.093L500.27 416.248A63.997 63.997 0 0 1 444.989 448H45.025c-18.523 0-30.064-20.093-20.731-36.093l72.424-124.155A64 64 0 0 1 152 256h399.964c18.523 0 30.064 20.093 20.73 36.093zM152 224h328v-48c0-26.51-21.49-48-48-48H272l-64-64H48C21.49 64 0 85.49 0 112v278.046l69.077-118.418C86.214 242.25 117.989 224 152 224z"></path>
+        </svg>
+      </div>
+      <div class="floaterz">
+        <svg id="saveBtn" class="svg-inline--fa fa-w-14 floater opener tlef" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" title="&lt;ol&gt;Save Build&lt;/ol&gt;">
+          <path fill="currentColor" d="M433.941 129.941l-83.882-83.882A48 48 0 0 0 316.118 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V163.882a48 48 0 0 0-14.059-33.941zM224 416c-35.346 0-64-28.654-64-64 0-35.346 28.654-64 64-64s64 28.654 64 64c0 35.346-28.654 64-64 64zm96-304.52V212c0 6.627-5.373 12-12 12H76c-6.627 0-12-5.373-12-12V76c0-6.627 5.373-12 12-12h228.52c3.183 0 6.235 1.264 8.485 3.515l3.48 3.48A11.996 11.996 0 0 1 320 79.48z"></path>
+        </svg>
       </div>
     </div>
     <div class="titler2 sizer a1 subgov">
